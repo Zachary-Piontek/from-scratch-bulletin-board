@@ -2,24 +2,28 @@
 import { postItNotes } from './fetch-utils/fetch.js';
 
 // import component creators
+import createBulletinBoard from './components/BulletinBoard.js';
 
 // declare state variables
-let postIt = [];
+let postIts = [];
 
 // write handler functions
 async function pageLoad() {
-    postIt = await postItNotes();
-    console.log(postIt);
+    postIts = await postItNotes();
+    // console.log(postIts);
+    display();
 }
 
 // Create each component: 
+const bulletinBoard = createBulletinBoard(document.getElementById('bulletin-board'));
 // - pass in the root element via querySelector
 // - pass any needed handler functions as properties of an actions object 
 
 // Roll-up display function that renders (calls with state) each component
-// function display() {
-//     // Call each component passing in props that are the pieces of state this component needs
-// }
+function display() {
+    bulletinBoard({ postIts });
+    // Call each component passing in props that are the pieces of state this component needs
+}
 
 // Call display on page load
 pageLoad();
