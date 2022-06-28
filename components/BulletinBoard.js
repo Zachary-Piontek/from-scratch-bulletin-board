@@ -19,6 +19,7 @@ export function postNote({ post }) {
     const parContact = document.createElement('p');
 
     
+    
     headerTitle.textContent = post.title;
     parDescription.textContent = post.description;
     parContact.textContent = post.contact;
