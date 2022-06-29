@@ -19,14 +19,20 @@
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
+        <a href="/"><img src="/assets/html_css_js.png"></a>
         <h1>Bulletin Board</h1>
     </header>
     
     <main>
-        <form>
-            <button>Sign In</button>
-            <button>Create Post</button>
+        <form id="sign-in">
+            <h1>Sign In</h1>
+            <label>Email
+                <input type="email" name="email" required/>
+            </label>
+            <label>Password
+                <input type="password" name="password" required/>
+            </label>
+            <a href="/"><button>Sign In</button></a>
         </form>
         
     </main>

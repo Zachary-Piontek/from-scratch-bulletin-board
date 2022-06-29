@@ -3,6 +3,7 @@ import { postItNotes } from './fetch-utils/fetch.js';
 
 // import component creators
 import createBulletinBoard from './components/BulletinBoard.js';
+// import createAuthForm from './components/AuthForm.js';
 
 // declare state variables
 let postIts = [];
@@ -16,15 +17,10 @@ async function pageLoad() {
 
 // Create each component: 
 const bulletinBoard = createBulletinBoard(document.getElementById('bulletin-board'));
-// const signInButton = document.getElementById('sign-in');
+// const signInForm = createAuthForm(document.getElementById('sign-in'));
+
 // - pass in the root element via querySelector
 // - pass any needed handler functions as properties of an actions object 
-
-// signInButton.addEventListener('click', () => {
-//     location.replace('/auth');
-// });
-
-
 
 
 

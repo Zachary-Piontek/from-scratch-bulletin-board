@@ -22,3 +22,7 @@ export async function getPostItNotes(id) {
     return response.data;
 }
 
+export async function signIn(email, password) {
+    await client.auth.signIn({ email, password });
+    return (window.location.href = '/');
+}
