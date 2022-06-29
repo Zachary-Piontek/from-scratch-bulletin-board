@@ -13,20 +13,20 @@ export default function createBulletinBoard(root) {
 }
 
 export function postNote({ post }) {
-    const li = document.createElement('li');
+    const div = document.createElement('div');
     const headerTitle = document.createElement('h2');
     const parDescription = document.createElement('p');
     const parContact = document.createElement('p');
 
     
-    
+
     headerTitle.textContent = post.title;
     parDescription.textContent = post.description;
     parContact.textContent = post.contact;
 
-    li.append(headerTitle, parContact, parDescription);
+    div.append(headerTitle, parContact, parDescription);
     
-    return li;
+    return div;
 }
 
 

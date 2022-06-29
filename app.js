@@ -16,8 +16,17 @@ async function pageLoad() {
 
 // Create each component: 
 const bulletinBoard = createBulletinBoard(document.getElementById('bulletin-board'));
+// const signInButton = document.getElementById('sign-in');
 // - pass in the root element via querySelector
 // - pass any needed handler functions as properties of an actions object 
+
+// signInButton.addEventListener('click', () => {
+//     location.replace('/auth');
+// });
+
+
+
+
 
 // Roll-up display function that renders (calls with state) each component
 function display() {
