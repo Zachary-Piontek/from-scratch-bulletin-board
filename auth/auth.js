@@ -1,10 +1,34 @@
-// import createAuthForm from '../components/AuthForm.js';
+import { getUser, signIn, signUp } from '../fetch-utils';
 
-// const signInForm = createAuthForm(document.getElementById('sign-in'));
+import createAuthForm from './AuthForm.js';
 
-// const signUpForm = createAuthForm(document.getElementById('sign-up'));
+async function handlePageLoad() {
+    const user = await getUser();
+    if (user) {
+        location.replace('/');
+        return;
+    }
+    display();
+}
 
-// function display() {
-//     signInForm();
-//     signUpForm();
-// }
+async function signInPost(email, password) {
+    const response = await signIn(email, password);
+    return response;
+}
+
+async function signUpPost(email, password) {
+    const response = await signUp(email, password);
+    return response;
+}
+
+const signInForm = createAuthForm(document.getElementById('sign-in'), { signInPost });
+
+const signUpForm = createAuthForm(document.getElementById('sign-up'), { signUpPost });
+
+
+function display() {
+    signInForm();
+    signUpForm();
+}
+
+handlePageLoad();

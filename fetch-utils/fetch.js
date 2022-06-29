@@ -36,3 +36,13 @@ export async function createPostIt(postIt) {
     const response = await client.from('posts').insert(postIt);
     return response;
 }
+
+export async function getUser() {
+    return client.auth.session() && client.auth.session().user;
+}
+
+export async function redirect() {
+    if (await getUser()) {
+        location.replace('/');
+    }
+}
