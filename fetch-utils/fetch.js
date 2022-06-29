@@ -26,3 +26,8 @@ export async function signIn(email, password) {
     await client.auth.signIn({ email, password });
     return (window.location.href = '/');
 }
+
+export async function signUp(email, password) {
+    await client.auth.signUp({ email, password });
+    return (window.location.href = '/');
+}

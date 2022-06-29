@@ -17,7 +17,7 @@ async function pageLoad() {
 
 // Create each component: 
 const bulletinBoard = createBulletinBoard(document.getElementById('bulletin-board'));
-// const signInForm = createAuthForm(document.getElementById('sign-in'));
+
 
 // - pass in the root element via querySelector
 // - pass any needed handler functions as properties of an actions object 
