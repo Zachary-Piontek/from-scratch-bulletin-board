@@ -19,19 +19,29 @@
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Bulletin Board</h1>
-        <a href="./auth"><button id="signIn">Sign In</button></a>
-        <a href="./CreatePost"><button id="createPostIt">Create Post</button></a>
+        <a href="/"><img src="/assets/html_css_js.png">
+        <h1>Bulletin Board Homepage</h1></a>
     </header>
-
+    
     <main>
-        <div id="bulletin-board"></div>
+        <form id="post-it">
+            <h1>Post It Note</h1>
+            <label>Title
+                <input type="text" name="title"/>
+            </label>
+            <label>Description
+                <input type="text" name="description"/>
+            </label> 
+            <label>Contact
+                <input type="text" name="contact"/>
+            </label>
+            <a href="/"><button>Post It</button></a>
+        </form>   
     </main>
 
     <footer>&copy;2022 Aspiring Software Developer</footer>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="./CreatePostIt.js"></script>
 </body>
 
 </html>

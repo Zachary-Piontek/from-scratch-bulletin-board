@@ -19,19 +19,37 @@
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Bulletin Board</h1>
-        <a href="./auth"><button id="signIn">Sign In</button></a>
-        <a href="./CreatePost"><button id="createPostIt">Create Post</button></a>
+        <a href="/"><img src="/assets/html_css_js.png">
+        <h1>Bulletin Board Homepage</h1></a>
     </header>
-
+    
     <main>
-        <div id="bulletin-board"></div>
+        <form id="sign-in">
+            <h1>Sign In</h1>
+            <label>Email
+                <input type="email" name="email" required/>
+            </label>
+            <label>Password
+                <input type="password" name="password" required/>
+            </label>
+            <a href="/"><button>Sign In</button></a>
+        </form>
+        <form id="sign-up">
+            <h1>Sign Up</h1>
+            <label>Email
+                <input type="email" name="email" required/>
+            </label>
+            <label>Password
+                <input type="password" name="password" required/>
+            </label>
+            <a href="/"><button>Sign Up</button></a>
+        </form>
+        
     </main>
 
     <footer>&copy;2022 Aspiring Software Developer</footer>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="./auth.js"></script>
 </body>
 
 </html>
