@@ -31,4 +31,4 @@ function display() {
     signUpForm();
 }
 
-handlePageLoad();
+handlePageLoad(); 
