@@ -31,3 +31,8 @@ export async function signUp(email, password) {
     await client.auth.signUp({ email, password });
     return (window.location.href = '/');
 }
+
+export async function createPostIt(postIt) {
+    const response = await client.from('posts').insert(postIt);
+    return response;
+}
